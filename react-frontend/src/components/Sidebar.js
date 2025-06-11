@@ -28,6 +28,8 @@ const Sidebar = () => {
     { text: "Inbox", path: "/notification", icon: <FaInbox />, role: "AUTHOR" },
     { text: "Contributed News", path: "/ListContributeContent", icon: <FaInbox />, role: "ADMIN" },
     { text: "POST", path: "/add-news/_add", icon: <FaUpload /> },
+    { text: "POST With AI", path: "/add-news-withAI/_add", icon: <FaUpload /> },
+
   ];
 
   const logout = () => {
@@ -79,7 +81,7 @@ const Sidebar = () => {
           position: "fixed", // Fix the sidebar to the left
           top: "0", // Stay at the top of the page
           left: "0", // Fix to the left side of the page
-          boxShadow: isOpen ? "4px 0 6px rgba(0, 0, 0, 0.1)" : "none",
+          // boxShadow: isOpen ? "4px 0 6px rgba(0, 0, 0, 0.1)" : "none",
         }}
       >
         {isOpen && (

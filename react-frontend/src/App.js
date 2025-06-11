@@ -21,11 +21,12 @@ import MyNewsListComponent from './components/MyNewsListComponent'
 import ListCommentComponent from './components/ListCommentComponent '
 import axios from 'axios';
 import Balitaraneta from './components/Balitaraneta';
-import ReadOnlyNewsDetails from './components/ReadOnlyNewsDetails copy';
+import ReadOnlyNewsDetails from './components/ReadOnlyNewsDetails';
 // import sendRawContentComponent from './components/sendRawContentComponent'
 import ContributeContentForm from './components/ContributeContentForm'
 import ReadContributedNewsDetailsForm from './components/ReadContributedNewsDetailsForm';
 import ListContributedNewsComponent from './components/ListContributedNewsComponent';
+import AddNewsFormWithAI from './components/AddNewsFormWithAI';
 
 function App() {
     const [authenticated, setAuthenticated] = useState(null);
@@ -96,6 +97,7 @@ function App() {
                                     <Route path="/news-management" component={ListNewsComponent} />
                                     <Route path="/notification" component={NotificationComponent} />
                                     <Route path="/add-news/:id" component={AddNewsForm} />
+                                    <Route path="/add-news-withAI/:id" component={AddNewsFormWithAI} />
                                     <Route path="/pending-news" component={ManagePendingNewsComponent} />
                                 </>
                             )}
