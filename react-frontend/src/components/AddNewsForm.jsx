@@ -15,7 +15,7 @@ class AddNewsComponent extends Component {
             description: '',
             content: '',
             category: '',
-            categories: ['istorya', 'aranetalk', 'animo-spotlight', 'balitaraneta', 'silid-aralneta', 'animo-vodcast'],
+            categories: ['AniModel', 'Animo In-Demand', 'InfoTalk', 'Animo-Idol','Galing Araneta', 'Lasallian Tambayan','Balitaraneta', 'Proud Lasallian', 'Testimonial'],
             author: '',
             embedYoutubeUrl: '',
             additionalPhotos: [],

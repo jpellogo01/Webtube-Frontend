@@ -33,22 +33,31 @@ const Header2 = () => {
                     </NavLink>
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/istorya">ISTORYA</NavLink>
+                            <NavLink className="nav-link" to="/Balitaraneta">BalitAraneta</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/aranetalk">AraneTalk</NavLink>
+                            <NavLink className="nav-link" to="/animo-idol">Animo Idol</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/animo-spotlight">Animo Spotlight Series</NavLink>
+                            <NavLink className="nav-link" to="/animo-in-demand">Animo In-Demand</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/balitaraneta">BalitAraneta</NavLink>
+                            <NavLink className="nav-link" to="/lassalian-tambayan">Lasallian Tambayan</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/silid-aralneta">Silid-AralNeta</NavLink>
+                            <NavLink className="nav-link" to="/proud-lasallian">Proud Lasallian</NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/animo-vodcast">Animo VODCAST</NavLink>
+                         <li className="nav-item">
+                            <NavLink className="nav-link" to="/info-talk">The DLSAU InfoTalk</NavLink>
+                        </li>
+                         <li className="nav-item">
+                            <NavLink className="nav-link" to="/testimonials">The DLSAU Testimonials</NavLink>
+                        </li>
+                         <li className="nav-item">
+                            <NavLink className="nav-link" to="/galing-araneta">Galing Araneta, Galing Araneta</NavLink>
+                        </li>
+                         <li className="nav-item">
+                            <NavLink className="nav-link" to="/animo-model">Animo Model</NavLink>
                         </li>
                     </ul>
                 </div>

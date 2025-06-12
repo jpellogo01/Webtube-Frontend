@@ -31,7 +31,7 @@ class balitaraneta extends Component {
     PublicNewsService.getAllPublicNews()
         .then(res => {
             const filteredNews = res.data
-                .filter(news => news.category && news.category === 'Balitaraneta')
+                .filter(news => news.category && news.category === 'Lasallian Tambayan')
                 .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
             this.setState({ newsList: filteredNews });
         })

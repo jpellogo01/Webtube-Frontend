@@ -4,7 +4,7 @@ import PublicNewsService from '../services/PublicNewsService';
 import Header from './Header';
 import ViewNewsPreview from './ViewNewsPreview';
 
-class NewsHomePage extends Component {
+class balitaraneta extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -28,18 +28,17 @@ class NewsHomePage extends Component {
     }
 
    fetchNews() {
-      PublicNewsService.getAllPublicNews()
-          .then(res => {
-              const filteredAndSortedNews = res.data
-                  .filter(news => news.category && news.category.toLowerCase() === 'silid-aralneta')
-                  .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-  
-              this.setState({ newsList: filteredAndSortedNews });
-          })
-          .catch(error => {
-              console.error('Error fetching news:', error);
-          });
-  } 
+    PublicNewsService.getAllPublicNews()
+        .then(res => {
+            const filteredNews = res.data
+                .filter(news => news.category && news.category === 'AnimoModel')
+                .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            this.setState({ newsList: filteredNews });
+        })
+        .catch(error => {
+            console.error('Error fetching news:', error);
+        });
+}
 
     handleScroll() {
         const windowHeight = window.innerHeight;
@@ -226,4 +225,4 @@ class NewsHomePage extends Component {
     }
 }
 
-export default NewsHomePage;
+export default balitaraneta;

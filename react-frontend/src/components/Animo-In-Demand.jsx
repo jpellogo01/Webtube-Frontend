@@ -4,7 +4,7 @@ import PublicNewsService from '../services/PublicNewsService';
 import Header from './Header';
 import ViewNewsPreview from './ViewNewsPreview';
 
-class NewsHomePage extends Component {
+class balitaraneta extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -31,7 +31,7 @@ class NewsHomePage extends Component {
     PublicNewsService.getAllPublicNews()
         .then(res => {
             const filteredNews = res.data
-                  .filter(news => news.category && news.category.toLowerCase() === 'animo-spotlight')
+                .filter(news => news.category && news.category.toLowerCase() === 'Animo In-Demand')
                 .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
             this.setState({ newsList: filteredNews });
         })
@@ -225,4 +225,4 @@ class NewsHomePage extends Component {
     }
 }
 
-export default NewsHomePage;
+export default balitaraneta;

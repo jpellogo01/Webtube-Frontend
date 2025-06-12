@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import AddUserComponent from './components/AddUserComponent';
 import ViewUserComponent from './components/ViewUserComponent';
@@ -7,20 +7,13 @@ import ListNewsComponent from "./components/ListNewsComponent";
 import ViewNewsDetailsForm from './components/ViewNewsDetailsForm';
 import Login from './components/Login';
 import HomePage from './components/HomePage';
-import AnimoSpotlight from './components/AnimoSpotlight';
-import Istorya from './components/IstoryaComponent';
-import Aranetalk from './components/AranetalkComponent';
-import SilidAralneta from './components/SilidAralnetaComponent';
-import AnimoVodCast from './components/AnimoVodCastComponent';
 import Unauthorized from './components/Unauthorized';
-import ListToReview from './components/ListToReview';
 import NotificationComponent from './components/NotificationComponent';
 import ListUserComponent from './components/ListUserComponent';
 import ManagePendingNewsComponent from './components/ManagePendingNewsComponent';
 import MyNewsListComponent from './components/MyNewsListComponent'
 import ListCommentComponent from './components/ListCommentComponent '
 import axios from 'axios';
-import Balitaraneta from './components/Balitaraneta';
 import ReadOnlyNewsDetails from './components/ReadOnlyNewsDetails';
 // import sendRawContentComponent from './components/sendRawContentComponent'
 import ContributeContentForm from './components/ContributeContentForm'
@@ -28,6 +21,15 @@ import ReadContributedNewsDetailsForm from './components/ReadContributedNewsDeta
 import ListContributedNewsComponent from './components/ListContributedNewsComponent';
 import AddNewsFormWithAI from './components/AddNewsFormWithAI';
 
+import Balitaraneta from './components/Balitaraneta';
+import AnimoIdol from './components/Animo-Idol';
+import InfoTalk from './components/InfoTalk';
+import GalingAraneta from './components/Galing-Araneta';
+import LasallianTambayan from './components/Lasallian-Tambayan';
+import AniModel from './components/AniModel';
+import ProudLasallian from './components/Proud-Lasallian';
+import AnimoIndemand from './components/Animo-In-Demand';
+import Testimonial from './components/Testimonial';
 function App() {
     const [authenticated, setAuthenticated] = useState(null);
     const [role, setRole] = useState('');
@@ -68,15 +70,18 @@ function App() {
             <div>
                 <Switch>
                     {/* Public Endpoints */}
-                    <Route path="/" exact component={HomePage} />
-                    <Route path="/comments" exact component={ListCommentComponent} />
-                    <Route path="/balitaraneta" exact component={Balitaraneta} />
-                    <Route path="/admin-approval" exact component={ListToReview} />
-                    <Route path="/animo-spotlight" component={AnimoSpotlight} />
-                    <Route path="/istorya" component={Istorya} />
-                    <Route path="/aranetalk" component={Aranetalk} />
-                    <Route path="/silid-aralneta" component={SilidAralneta} />
-                    <Route path="/animo-vodcast" component={AnimoVodCast} />
+                    <Route exact path="/" component={HomePage} />
+                    <Route exact path="/comments" component={ListCommentComponent} />
+                    <Route exact path="/balitaraneta" component={Balitaraneta} />
+                    <Route exact path="/animo-idol" component={AnimoIdol} />
+                    <Route exact path="/testimonials" component={Testimonial} />
+                    <Route exact path="/info-talk" component={InfoTalk} />
+                    <Route exact path="/galing-araneta" component={GalingAraneta} />
+                    <Route exact path="/lassalian-tambayan" component={LasallianTambayan} />
+                    <Route exact path="/animo-model" component={AniModel} />
+                    <Route exact path="/proud-lasallian" component={ProudLasallian} />
+                    <Route exact path="/animo-in-demand" component={AnimoIndemand} />
+
                     <Route path="/login" render={() => <Login onLogin={handleLogin} />} />
                     <Route path="/view-news/:id" component={ViewNewsDetailsForm} />
                     <Route path="/read-news/:id" component={ReadOnlyNewsDetails} />
